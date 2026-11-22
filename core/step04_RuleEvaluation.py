@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from typing import Any, Callable
 
-from step02_NormalizedEvent import NormalizedEvent
-from step03_EvaluationContext import EvaluationContext
+from .step02_NormalizedEvent import NormalizedEvent
+from .step03_EvaluationContext import EvaluationContext
 
 RuleCondition = Callable[[NormalizedEvent, dict[str, Any], EvaluationContext], bool]
 
@@ -86,7 +86,7 @@ RULES: list[Rule] = [
         reason = "approve decision with low confidence",
         evidence_fields = ["decision_type", "confidence"],
         is_critical_override= False,
-        thresholds = {"confidence": 0.6}
+        thresholds = {"confidence": 0.7}
     ),
     Rule(
         rule_id = "latency_high",

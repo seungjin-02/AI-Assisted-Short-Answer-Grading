@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 
-from step02_NormalizedEvent import NormalizedEvent
+from .step02_NormalizedEvent import NormalizedEvent
 
 @dataclass(frozen=True)
 class EvaluationContext:
